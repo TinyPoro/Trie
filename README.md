@@ -3,17 +3,17 @@
 [Source](https://threads-iiith.quora.com/Tutorial-on-Trie-and-example-problems "Permalink to Tutorial on Trie and example problems - Threads @ IIIT Hyderabad")
 
 # Hướng dẫn về Trie và các vấn đề ví dụ
-Nội dung trong bài viết này là về Tries và các khái niệm được sử dụng rộng rãi trong vài ứng dụng vào các vấn đề cụ thể. Chúng ta sẽ xem xét 2-3 vấn đề mà trie tỏ ra có ích.
+Nội dung trong bài viết này là về Tries và các khái niệm được sử dụng rộng rãi trong vài ứng dụng vào các vấn đề cụ thể. Chúng ta sẽ xem xét 2-3 vấn đề mà trie sẽ hữu ích.
 
 Đầu tiên chúng ta sẽ xem trie là gì. Trie có thể lưu trữ thông tin về các khóa/số/chuỗi 1 cách nhỏ gọn trong 1 cây. Các tries bao gồm các node, mỗi node lưu trữ 1 kí tự/bit. Chúng ta có thể thêm các chuỗi/số mới phù hợp.
 
-Đây là 1 ví dụ về 1 tri các chuỗi:
+Đây là một ví dụ trie về chuỗi:
 
 
 ![][1]
 
   
-Source: Wikipedia.
+Nguồn: Wikipedia.
 
 Nhưng giờ chúng ta sẽ giải quyết với các số, đặc biệt là các số ở dạng các bit nhị phân. Chúng ta sẽ hiểu rõ hơn khi giải quyết các vấn đề.
 
@@ -24,7 +24,7 @@ Giả sử chúng ta có 1 cấu trúc dữ liệu có thể thỏa mãn 2 loạ
 2\. Cho 1 số Y, tìm XOR tối đa của Y với tất cả các số đã được thêm vào cho tới hiện tại.
 
 
-Nếu chúng ta có được cấu trúc dữ liệu này, chúng ta sẽ dễ dàng thêm các số nguyên vào, và với truy vấn loại 2 chúng ta sẽ tìm được XOR tối đã.
+Nếu chúng ta có được cấu trúc dữ liệu này, chúng ta sẽ dễ dàng thêm các số nguyên vào, và với truy vấn loại 2 chúng ta sẽ tìm được XOR tối đa.
 Trie là cấu trúc dữ liệu chúng ta sẽ sử dụng. Đầu tiên hãy xem cách chúng ta thêm các phần tử vào trie.
 
 ![][2]
@@ -36,7 +36,7 @@ Vì vậy, chúng ta sẽ lần theo các đường đi của các số mà chú
 Bằng cách này, chúng ta lưu tất cả dữ liệu về các số được thêm vào trong trie cho đến bây giờ.
 
 Giờ với  câu truy vấn loại 2:
-Giả sử số Y của chúng ta là b1,b2..bn, trong đó b1,b2.. là các bit nhị phân. Chúng ta sẽ bắt đầu từ b1. Giờ để cho XOR đặt giá trị lớn nhất, chúng ta sẽ cố gắng biến most significant bit là 1 sau khi thực hiện XOR. Vì vạy, nếu b1 là 0, chúng ta sẽ cần 1 và  ngược lại. Trong trie, chúng ta sẽ đi về các phía có các bit yêu cầu. Nếu  không có lựa chọn tối ưu, chúng ta sẽ đi về phía khác. Thực hiện điều này cho tất cả từ i=1 cho tới n, chúng ta sẽ lấy được XOR tối đã có thể.
+Giả sử số Y của chúng ta là b1,b2..bn, trong đó b1,b2.. là các bit nhị phân. Chúng ta sẽ bắt đầu từ b1. Giờ để cho XOR đặt giá trị lớn nhất, chúng ta sẽ cố gắng biến most significant bit là 1 sau khi thực hiện XOR. Vì vạy, nếu b1 là 0, chúng ta sẽ cần 1 và  ngược lại. Trong trie, chúng ta sẽ đi về các phía có các bit yêu cầu. Nếu  không có lựa chọn tối ưu, chúng ta sẽ đi về phía khác. Thực hiện điều này cho tất cả từ i=1 cho tới n, chúng ta sẽ lấy được giá trị lớn nhất của XOR .
 
 ![][3]
 
@@ -67,7 +67,7 @@ chúng ta có thể thử vấn đề này ở đây: [ACM-ICPC Live Archive][4]
 
 **Giải pháp:** 
 Vấn đề này 1 lần nữa sử dụng các khái niệm mà chúng ta đã thấy cho tới giờ. Chúng ta sẽ thực hiện như với câu hỏi trước.
-Với mỗi chỉ mục i=1 đến N, chúng ta có thể đếm có bao nhiêu mảng con kết thúc tại vị trí thứ i thỏa mãn điều kiện đưađưa ra.
+Với mỗi chỉ mục i=1 đến N, chúng ta có thể đếm có bao nhiêu mảng con kết thúc tại vị trí thứ i thỏa mãn điều kiện đưa ra.
  
 
     
